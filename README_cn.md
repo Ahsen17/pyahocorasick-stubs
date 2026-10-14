@@ -2,7 +2,7 @@
 
 # pyahocorasick-stubs
 
-为 Unicode 版 [pyahocorasick](https://github.com/WojciechMula/pyahocorasick) 2.3.1
+为 Unicode 版 [pyahocorasick](https://github.com/WojciechMula/pyahocorasick) 
 提供的独立 [PEP 561](https://peps.python.org/pep-0561/) stub-only 类型包。它让
 mypy、pyright 等类型检查器精确理解 `ahocorasick` C 扩展 —— `Automaton` 类、
 存储与键模式、模块级 `load()`。只含类型，不含任何运行时代码。要求 Python 3.12+。

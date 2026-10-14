@@ -3,7 +3,7 @@
 # pyahocorasick-stubs
 
 Independent [PEP 561](https://peps.python.org/pep-0561/) stub-only package for the
-Unicode build of [pyahocorasick](https://github.com/WojciechMula/pyahocorasick) 2.3.1.
+Unicode build of [pyahocorasick](https://github.com/WojciechMula/pyahocorasick).
 It gives type checkers (mypy, pyright) a precise picture of the `ahocorasick` C
 extension — the `Automaton` class, its storage and key modes, and the module-level
 `load()`. Types only, no runtime code. Requires Python 3.12+.
