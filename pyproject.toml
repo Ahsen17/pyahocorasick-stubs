@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyahocorasick-stubs"
+version = "2.3.1.0"
+description = "Independent PEP 561 stubs for the Unicode pyahocorasick 2.3.1 C extension"
+readme = "README.md"
+authors = [
+    { name = "Ahsen17", email = "mesailedward@qq.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pyahocorasick>=2.3.1,<2.4",
+    "typing-extensions>=4.12",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Typing :: Stubs Only",
+]
+
+[dependency-groups]
+dev = ["mypy>=1.13", "pyright>=1.1.390"]
+
+[tool.setuptools]
+packages = ["ahocorasick-stubs"]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.package-data]
+"ahocorasick-stubs" = ["*.pyi"]
+
+[tool.pyright]
+include = ["tests/typecheck.py", "src/ahocorasick-stubs"]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["tests/typecheck.py"]
+
+[tool.uv]
+cache-keys = [
+    { file = "pyproject.toml" },
+    { file = "src/**/*.pyi" },
+    { file = "README.md" },
+]

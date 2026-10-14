@@ -1,0 +1,3 @@
+include LICENSE README.md README_cn.md uv.lock
+recursive-include src *.pyi
+recursive-include tests *.py
